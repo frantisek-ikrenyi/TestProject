@@ -16,7 +16,7 @@ namespace TestWebApplication.Controllers
             {
                 Username = "Username",
                 Password = "Password",
-                Emailaddress = "Emailaddress"
+                Emailaddress = "Email"
             };
             return View(viewModel);
         }
