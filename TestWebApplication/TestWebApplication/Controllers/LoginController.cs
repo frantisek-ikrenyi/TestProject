@@ -14,15 +14,12 @@ namespace TestWebApplication.Controllers
         {
             var viewModel = new LoginViewModel()
             {
-                Username = "",
-                Password = "",
-                Emailaddress = ""
+                Username = "Username",
+                Password = "Password",
+                Emailaddress = "Email"
             };
             return View(viewModel);
         }
-
-
-       
 
         [HttpPost]
         public JsonResult DoLoginFor(LoginViewModel viewModel)
