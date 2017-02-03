@@ -19,9 +19,10 @@ namespace TestWebApplication.Controllers
                 Emailaddress = ""
             };
             return View(viewModel);
-
         }
 
+
+    
         [HttpPost]
         public JsonResult DoLoginFor(LoginViewModel viewModel)
         {
