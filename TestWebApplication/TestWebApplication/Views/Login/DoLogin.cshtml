@@ -1,0 +1,44 @@
+﻿
+@model TestWebApplication.ViewModel.LoginViewModel
+@using TestWebApplication.Helpers
+
+@section styles{
+    @Styles.Render("~/Content/themes/base/css")
+    <link href="~/Content/Person.css" rel="stylesheet" />
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryui")
+    <script src="~/Scripts/knockout-3.4.1.js"></script>
+    <script src="~/Scripts/knockout.mapping-latest.js"></script>
+    <script src="~/Scripts/Application/Login.js"></script>
+    <script type="text/javascript">
+        Login.SaveUrl = '@Url.Action("DoLoginFor", "Login")';
+        Login.ViewModel = ko.mapping.fromJS(@Html.Raw(Json.Encode(Model)));
+    </script>
+}
+<form>
+    <div class="mainWrapper">
+        <table>
+            <tr>
+                <td>
+                    Username:
+                </td>
+                <td>
+                    @Html.ObservableControlFor(model => model.Username, ControlTypeConstants.Username)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    @Html.ObservableControlFor(model => model.Password, ControlTypeConstants.Password)
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <br />
+    <input id="LoginSubmit" type="submit" value="Login" />
+</form>
