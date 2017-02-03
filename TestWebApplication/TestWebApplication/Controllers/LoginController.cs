@@ -19,6 +19,7 @@ namespace TestWebApplication.Controllers
                 Emailaddress = ""
             };
             return View(viewModel);
+
         }
 
         [HttpPost]
