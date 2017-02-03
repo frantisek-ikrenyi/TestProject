@@ -126,6 +126,17 @@ namespace TestWebApplication.Helpers
             return MvcHtmlString.Create(controlBuilder.ToString());
         }
 
+
+        public static int Factorial(int n)
+        {
+            if (n <= 0)
+                return -1;
+
+            if (n == 1)
+                return 1;
+
+            return n * Factorial(n - 1);
+        }
         /// <summary>
         /// To convert '_' into '-'.
         /// </summary>

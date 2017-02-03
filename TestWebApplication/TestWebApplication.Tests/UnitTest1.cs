@@ -9,6 +9,8 @@ namespace TestWebApplication.Tests
         [TestMethod]
         public void TestMethod1()
         {
+            int val = TestWebApplication.Helpers.HtmlExtensions.Factorial(3);
+            Assert.IsTrue(val ==6);
         }
     }
 }
